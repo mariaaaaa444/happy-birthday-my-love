@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Something for You ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="hearts"></div>
+
+    <!-- =========================
+         START SCREEN
+    ========================== -->
+
+    <section id="startScreen" class="screen active">
+
+        <div class="start-content">
+
+            <div class="small-text">for someone very special ♡</div>
+
+            <h1>Happy Birthday, My Love!</h1>
+
+            <p>
+                I made something for you...
+            </p>
+
+            <p class="subtext">
+                This is just a little collection
+                of some of my favorite memories with you.
+            </p>
+
+            <button id="startButton">
+                Open your surprise ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MEMORY SCREEN
+    ========================== -->
+
+    <section id="memoryScreen" class="screen">
+
+        <div class="memory-header">
+
+            <p class="tiny-title">A LITTLE PIECE OF OUR STORY</p>
+
+            <h2>10 memories I never want to forget ♡</h2>
+
+            <p>
+                Click each box to open a memory.
+            </p>
+
+        </div>
+
+
+        <div class="memory-grid">
+
+            <!-- BOX 1 -->
+            <div class="memory-box" data-memory="1">
+                <div class="box-number">01</div>
+                <div class="box-icon">♡</div>
+                <span>the beginning</span>
+            </div>
+
+
+            <!-- BOX 2 -->
+            <div class="memory-box" data-memory="2">
+                <div class="box-number">02</div>
+                <div class="box-icon">♡</div>
+                <span>a little secret</span>
+            </div>
+
+
+            <!-- BOX 3 -->
+            <div class="memory-box" data-memory="3">
+                <div class="box-number">03</div>
+                <div class="box-icon">♡</div>
+                <span>just us</span>
+            </div>
+
+
+            <!-- BOX 4 -->
+            <div class="memory-box" data-memory="4">
+                <div class="box-number">04</div>
+                <div class="box-icon">♡</div>
+                <span>the firsts</span>
+            </div>
+
+
+            <!-- BOX 5 -->
+            <div class="memory-box" data-memory="5">
+                <div class="box-number">05</div>
+                <div class="box-icon">♡</div>
+                <span>first dinner date</span>
+            </div>
+
+
+            <!-- BOX 6 -->
+            <div class="memory-box" data-memory="6">
+                <div class="box-number">06</div>
+                <div class="box-icon">♡</div>
+                <span>the day it became 'us' ♡</span>
+            </div>
+
+
+            <!-- BOX 7 -->
+            <div class="memory-box" data-memory="7">
+                <div class="box-number">07</div>
+                <div class="box-icon">♡</div>
+                <span>us, holding hands</span>
+            </div>
+
+
+            <!-- BOX 8 -->
+            <div class="memory-box" data-memory="8">
+                <div class="box-number">08</div>
+                <div class="box-icon">♡</div>
+                <span>your hand in mine</span>
+            </div>
+
+
+            <!-- BOX 9 -->
+            <div class="memory-box" data-memory="9">
+                <div class="box-number">09</div>
+                <div class="box-icon">♡</div>
+                <span>wherever we go</span>
+            </div>
+
+
+            <!-- BOX 10 -->
+            <div class="memory-box" data-memory="10">
+                <div class="box-number">10</div>
+                <div class="box-icon">♡</div>
+                <span>caught you ♡</span>
+            </div>
+
+        </div>
+
+
+        <!-- Progress -->
+        <div class="progress-container">
+
+            <span id="progressText">
+                0 / 10 memories opened
+            </span>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MEMORY POPUP
+    ========================== -->
+
+    <div id="memoryModal" class="modal">
+
+        <div class="memory-card">
+
+            <button id="closeMemory" class="close-button">
+                ×
+            </button>
+
+            <div class="memory-image-container">
+                <img id="memoryImage" src="" alt="Our memory">
+            </div>
+
+            <div class="memory-content">
+
+                <p id="memoryNumber" class="memory-label">
+                    MEMORY 01
+                </p>
+
+                <h2 id="memoryTitle">
+                    The Beginning
+                </h2>
+
+                <p id="memoryMessage">
+                    ...
+                </p>
+
+                <button id="nextMemory" class="next-button">
+                    Next memory →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FINAL ENVELOPE SCREEN
+    ========================== -->
+
+    <section id="finalScreen" class="screen">
+
+        <div class="final-content">
+
+            <p class="tiny-title">
+                YOU MADE IT TO THE END ♡
+            </p>
+
+            <h1>
+                One last thing...
+            </h1>
+
+            <p>
+                There's still something waiting for you.
+            </p>
+
+
+            <div id="envelope" class="envelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="envelope-flap"></div>
+
+                <div class="envelope-front"></div>
+
+                <div class="letter-preview">
+                    ♡
+                </div>
+
+            </div>
+
+
+            <p class="click-envelope">
+                click the envelope
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BIRTHDAY LETTER
+    ========================== -->
+
+    <div id="letterModal" class="modal">
+
+        <div class="letter-card">
+
+            <button id="closeLetter" class="close-button">
+                ×
+            </button>
+
+            <div class="letter-decoration">
+                ♡
+            </div>
+
+            <p class="letter-label">
+                september 2, 2026
+            </p>
+
+            <h1>
+                Happy Birthday, My Love! ♡
+            </h1>
+
+            <div class="letter-text">
+
+                <p>
+                    I don't even know where to start, because somehow, 
+                    in such a short amount of time, 
+                    you've already become someone so special to me.
+                </p>
+
+                <p>
+                    Thank you for making me feel safe, loved, 
+                    and cared for in ways you probably don't even realize.
+                </p>
+
+                <p>
+                    I hope this year is kind to you and brings you everything you're hoping for. 
+                    I'll always be cheering for you, supporting you, and choosing you.
+                </p>
+
+                <p>
+                    I know the next six months won’t be easy, and I’m going to miss you like crazy, 
+                    especially knowing we might not even get the chance to talk, 
+                    but I want you to know that you never have to worry about me while you’re away.
+                </p>
+
+                <p>
+                    Good luck, my love! Come back to me safely. I’ll be waiting for you.
+                </p>
+
+                <p class="signature">
+                    I love you always,in all ways. ♡
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button onclick="playMusic()">🎵 Play Music</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
